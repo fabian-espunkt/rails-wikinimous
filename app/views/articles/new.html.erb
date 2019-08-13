@@ -1,0 +1,18 @@
+<h1>New article</h1>
+
+<%= form_for @article do |x| %>
+
+ <div>
+    <%= x.label :title %>
+    <%= x.text_field :title, placeholder: 'Some title' %>
+  </div>
+
+  <div>
+    <%= x.label :content %>
+    <%= x.text_field :content, placeholder: 'Lorem ipsum' %>
+  </div>
+
+  <%= x.submit "Create Article" %>
+ <% end %>
+
+ <%= link_to "back", articles_path(@articles) %>
